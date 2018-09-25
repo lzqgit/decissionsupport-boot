@@ -1,0 +1,172 @@
+<!-- 右侧内容 -->
+	<div id="tab_bar">
+		<ul>
+			<li id="tab1" onclick="liClick('tab1')">&emsp;统计图</li>
+			<li id="tab2" onclick="liClick('tab2')">统计列表</li>
+		</ul>
+	</div>
+	<!-- 统计图 -->
+	<div class="tab_css" id="tab1_content" style="display: block">
+		<div class="rm_materialPic rm_floatLeft">
+			<div id="expertTypeBar" class="rm_padding_top" style="height:300px;"></div>
+			<div class="indexLevelBorder"></div>
+			<div id="expertTypePie" class="rm_padding_top" style="height:300px;"></div>
+		</div>
+		<div class="rm_materialPic rm_floatRight">
+			<div id="expertEducationBar" class="rm_padding_top" style="height:300px;"></div>
+			<div class="indexLevelBorder"></div>
+			<div id="expertEducationPie" class="rm_padding_top" style="height:300px;"></div>
+		</div>
+	</div>
+	<!-- 统计列表内容 -->
+	<div class="tab_css" id="tab2_content">
+		<div class="creatRescuePlanTableDiv"></div>
+	</div>
+	<!-- end -->
+	<!-- 查看详情 -->
+	<div class="modal fade" id="indexModalForm" tabindex="-1" role="dialog" aria-labelledby="modalFormLabel" data-backdrop="static" aria-hidden="true" style="display: none;">
+		<div class="modal-dialog">
+			<div class="modal-content modal-content-userStyle">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				</div>
+				<div class="modal-body" >
+					<form class="form-inline" role="form" id="rescueSeeForm">
+						<div>
+							<fieldset>
+								<legend>
+									<span class="indexCheckTitle">详情</span>
+								</legend>
+								<table border="1">
+									<div class="form-group">
+										<tr>
+										 	 <th>
+										  	 	<label class="" for="expertName_check"> 姓名: </label>
+											 </th>
+										 	 <td> 
+										 	 	<input style="margin:5px;" maxlength="16" type="text" class="form-control" id="expertName_check" name="expertName_check" readonly="true"></input>
+											 </td>										
+										  	 <th>
+										  	 	<label class="" for="expertSex_check"> 性别 : </label>
+											 </th>
+										 	 <td> 
+										 		 <input style="margin:5px;" maxlength="40" type="text" class="form-control" id="expertSex_check" name="expertSex_check" readonly="true"></input>
+											 </td>
+										  	 <th>
+										  	 	<label class="" for="education_check"> 学历 : </label>
+											 </th>
+										 	 <td> 
+										 	 	<input style="margin:5px;" maxlength="16" type="text" class="form-control" id="education_check" name="education_check" readonly="true"></input>
+											 </td>																							
+										</tr>
+									</div>
+									<div class="form-group">
+										<tr>
+										  	 <th>
+										  	 	<label class="" for="IDNumber_check"> 身份证号 : </label>
+											 </th>
+										 	 <td>
+										 	 	<input style="margin:5px;" maxlength="16" type="text" class="form-control" id="IDNumber_check" name="IDNumber_check" readonly="true"></input>
+											 </td>										
+										  	 <th>
+										  		 <label class="" for="phone_check"> 手机号码 : </label>
+											 </th>
+										 	 <td> 
+										 		 <input style="margin:5px;" maxlength="16" type="text" class="form-control" id="phone_check" name="phone_check" readonly="true"></input>
+											 </td>										
+										  	 <th>
+										  	 	<label class="" for="birthDate_check"> 出生年月: </label>
+											 </th>
+										 	 <td> 
+										 	 	<input style="margin:5px;" maxlength="16" type="text" class="form-control" id="birthDate_check" name="birthDate_check" readonly="true"></input>
+											 </td>										
+									
+										</tr>
+									</div>
+									<div class="form-group">
+										<tr>
+										  	 <th >
+										  	 	<label class="" for="expertType_check"> 专家类别 : </label>
+											 </th>
+										 	 <td> 
+										 	 	<textarea rows="3" cols="20" style="margin:5px;resize:none;"type="text" class="form-control" id="expertType_check" name="expertType_check" readonly="true"></textarea>
+											 </td>
+											 <th>
+										  		 <label class="" for="major_check"> 专业 : </label>
+											 </th>
+										 	 <td> 
+										 		 <textarea rows="3" cols="20" style="margin:5px;resize:none;" type="text" class="form-control" id="major_check" name="major_check" readonly="true"></textarea>
+											 </td>					 										
+										  	 <th>
+										  		 <label class="" for="presentDuty_check"> 现任职务 : </label>
+											 </th>
+										 	 <td> 
+										 	 	<textarea rows="3" cols="20" style="margin:5px;resize:none;" type="text" class="form-control" id="presentDuty_check" name="presentDuty_check" readonly="true"></textarea>
+											 </td>										
+										</tr>
+									</div>
+									<div class="form-group">
+										<tr>
+										  	 <th>
+										  	 	<label class="" for="health_check"> 健康状况 : </label>
+											 </th>
+										 	 <td> 
+										 	 	<input  style="margin:5px;" maxlength="16" type="text" class="form-control" id="health_check" name="health_check" readonly="true"></input>
+											 </td>										
+										  	 <th>										  	 
+										  		 <label class="" for="telNumber_check"> 办公电话 : </label>
+											 </th>
+										 	 <td> 
+										 	 	<input style="margin:5px;" maxlength="16" type="text" class="form-control" id="telNumber_check" name="telNumber_check" readonly="true"></input>
+											 </td>										
+										  	 <th>
+										  		 <label class="" for="email_check"> 电子邮箱 : </label>
+											 </th>
+										 	 <td> 
+										 		 <input style="margin:5px;" maxlength="16" type="text" class="form-control" id="email_check" name="email_check" readonly="true"></input>
+											 </td>																												
+										</tr>
+									</div>
+									<div class="form-group">
+										<tr>
+										  	 <th>
+										  		 <label class="" for="unitAddress_check"> 单位地址 : </label>
+											 </th>
+										 	 <td colspan="10">
+										 	 	<textarea rows="3" cols="95" style="margin:5px;resize:none;" maxlength="400" type="text" class="form-control" readonly="true" id="unitAddress_check" name="unitAddress_check"></textarea>
+										 	 </td>										
+										</tr>
+									</div>
+									<div class="form-group">
+										<tr>
+										  	 <th>
+										  		 <label class="" for="homeAddress_check"> 家庭地址 : </label>
+											 </th>
+										 	 <td colspan="10">
+										 		 <textarea rows="3" cols="95" style="margin:5px;resize:none;" maxlength="400" type="text" class="form-control" readonly="true" id="homeAddress_check" name="homeAddress_check"></textarea>
+										 	 </td>
+										
+										</tr>
+									</div>
+									<div class="form-group">
+										<tr>
+										  	 <th>
+										  		 <label class="" for="expertInfo_check"> 专家简介 : </label>
+											 </th>
+										 	 <td colspan="10">
+										 	 	<textarea rows="3" cols="95" style="margin:5px;resize:none;" maxlength="400" type="text" class="form-control" readonly="true" id="expertInfo_check" name="expertInfo_check"></textarea>
+										 	 </td>
+										
+										</tr>
+									</div>
+								</table>
+							</fieldset>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="js/EmergencyResources/expertDatabase.js" language="JavaScript" ></script>
+	<!-- 查看详情 -->
+	<!-- end -->

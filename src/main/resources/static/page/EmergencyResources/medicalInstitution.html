@@ -1,0 +1,222 @@
+<div id="tab_bar">
+		<ul>
+			<li id="tab1" onclick="liClick('tab1')">&emsp;统计图</li>
+			<li id="tab2" onclick="liClick('tab2')">统计列表</li>
+		</ul>
+	</div>
+	<!-- 统计图 -->
+	<div class="tab_css" id="tab1_content" style="display: block">
+		<div class="rm_materialPic rm_floatLeft">
+			<div id="mediacalConstituteBar" class="rm_padding_top" style="height:300px;"></div>
+			<div class="indexLevelBorder"></div>
+			<div id="mediacalConstitutePie" class="rm_padding_top" style="height:300px;"></div>
+		</div>
+		<div class="rm_materialPic rm_floatRight">
+			<div id="mediacalBedBar" class="rm_padding_top" style="height:300px;"></div>
+			<div class="indexLevelBorder"></div>
+			<div id="mediacalBedPie" class="rm_padding_top" style="height:300px;"></div>
+		</div>
+	</div>
+	<!-- 统计列表内容 -->
+	<div class="tab_css" id="tab2_content">
+		<div class="creatRescuePlanTableDiv"></div>
+	</div>
+		<!-- end -->
+	<!-- 查看详情 -->
+	<div class="modal fade" id="indexModalForm" tabindex="-1" role="dialog"
+		aria-labelledby="modalFormLabel" data-backdrop="static"
+		aria-hidden="true" style="display: none;">
+		<div class="modal-dialog">
+			<div class="modal-content modal-content-userStyle">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal"
+						aria-hidden="true">&times;</button>
+				</div>
+				<div class="modal-body" >
+					<form class="form-inline" role="form" id="rescueSeeForm">
+						<div>
+							<fieldset>
+								<legend>
+									<span class="indexCheckTitle">详情</span>
+								</legend>
+								<table border="1">
+									<div class="form-group">
+										<tr>
+										 	 <th>
+										  	 	<label class="" for="institutionName_check"> 机构名称: </label>
+											 </th>
+										 	 <td> 
+										 	 	<textarea rows="3" cols="20" style="margin:5px;resize:none;" type="text" class="form-control" id="institutionName_check" name="institutionName_check" readonly="true"></textarea>
+											 </td>									
+										  	 <th>
+										  	     <label class="" for="unitLevel_check"> 单位级别 : </label>
+											 </th>
+										 	 <td> 
+										 	     <textarea rows="3" cols="20" style="margin:5px;resize:none;"  type="text" class="form-control" id="unitLevel_check" name="unitLevel_check" readonly="true"></textarea>
+											 </td>
+										  	 <th >
+										  	 	<label class="" for="institutionPublicUnit_check"> 所属单位 : </label>
+											 </th>
+										 	 <td> 
+										 		 <textarea rows="3" cols="20" style="margin:5px;resize:none;"  type="text" class="form-control" id="institutionPublicUnit_check" name="institutionPublicUnit_check" readonly="true"></textarea>
+											 </td>																							
+										</tr>
+									</div>
+									<div class="form-group">
+										<tr>
+										  	 <th>
+										  	 	<label class="" for="doctorCount_check"> 医生数: </label>
+											 </th>
+										 	 <td> 
+										 	 	<input style="margin:5px;" maxlength="16" type="text" class="form-control" id="doctorCount_check" name="doctorCount_check" readonly="true"></input>
+											 </td>										
+										  	 <th>
+										  		 <label class="" for="nurseCount_check"> 护士数 : </label>
+											 </th>
+										 	 <td> 
+										 		 <input style="margin:5px;" maxlength="16" type="text" class="form-control" id="nurseCount_check" name="nurseCount_check" readonly="true"></input>
+											 </td>
+										  	 <th>
+										  	 	<label class="" for="bedCount_check"> 病床数 : </label>
+											 </th>
+										 	 <td> 
+										 	 	<input  style="margin:5px;" maxlength="16" type="text" class="form-control" id="bedCount_check" name="bedCount_check" readonly="true"></input>
+											 </td>										
+										</tr>
+									</div>
+									<div class="form-group">
+										<tr>										
+										  	 <th>
+										  		 <label class="" for="otherCount_check"> 其他技术人数: </label>
+											 </th>
+										 	 <td> 
+										 	 	<input style="margin:5px;" maxlength="16" type="text" class="form-control" id="otherCount_check" name="otherCount_check" readonly="true"></input>
+											 </td>										
+										  	 <th>
+										  		 <label class="" for="ambulanceCount_check"> 急救车辆数 : </label>
+											 </th>
+										 	 <td> 
+										 	 	<input style="margin:5px;" maxlength="16" type="text" class="form-control" id="ambulanceCount_check" name="ambulanceCount_check" readonly="true"></input>
+											 </td>	
+										  	 <th>
+										  	 	<label class="" for="fax_check"> 传真 : </label>
+											 </th>
+										 	 <td> 
+										 	 	<input style="margin:5px;" maxlength="16" type="text" class="form-control" id="fax_check" name="fax_check" readonly="true"></input>
+											 </td>											 									
+										</tr>
+									</div>
+									<div class="form-group">
+										<tr>
+										  	 <th>
+										  	 	<label class="" for="telName_check"> 联系人姓名 : </label>
+											 </th>
+										 	 <td> 
+										 		 <input style="margin:5px;" maxlength="16" type="text" class="form-control" id="telName_check" name="telName_check" readonly="true"></input>
+											 </td>										
+										  	 <th>
+										  		 <label class="" for="telNumber_check"> 联系人电话 : </label>
+											 </th>
+										 	 <td> 
+										 	 	<input style="margin:5px;" maxlength="16" type="text" class="form-control" id="telNumber_check" name="telNumber_check" readonly="true"></input>
+											 </td>
+										  	 <th>
+										  	 	<label class="" for="telPhone_check"> 联系人手机: </label>
+											 </th>
+										 	 <td> 
+										 		 <input style="margin:5px;" maxlength="16" type="text" class="form-control" id="telPhone_check" name="telPhone_check" readonly="true"></input>
+											 </td>										
+										</tr>
+									</div>
+									<div class="form-group">
+										<tr>	
+											 <th>
+										  	 	<label class="" for="longitude_check"> 经度 : </label>
+											 </th>
+										 	 <td> 
+										 		 <input style="margin:5px;" maxlength="16" type="text" class="form-control" id="longitude_check" name="longitude_check" readonly="true"></input>
+											 </td>
+											 <th>
+										  		 <label class="" for="latitude_check"> 纬度 : </label>
+											 </th>
+										 		 <td> 
+										 	 <input style="margin:5px;" maxlength="16" type="text" class="form-control" id="latitude_check" name="latitude_check" readonly="true"></input>
+											</td>
+										
+										</tr>
+									</div>
+									<div class="form-group">
+										<tr>
+										  	 <th>
+										  	 	<label class="" for="medicalEquip_check"> 主要医疗装备: </label>
+											 </th>
+										 	 <td colspan="10">
+										 	 	<textarea rows="3" cols="95" style="margin:5px;resize:none;" maxlength="400" type="text" class="form-control" readonly="true" id="medicalEquip_check" name="medicalEquip_check"></textarea>
+										 	 </td>										
+										</tr>
+									</div>
+									<div class="form-group">
+										<tr>
+										  	 <th>
+										  		 <label class="" for="address_check"> 地址 : </label>
+											 </th>
+										 	 <td colspan="10">
+										 	 	<textarea rows="3" cols="95" style="margin:5px;resize:none;" maxlength="400" type="text" class="form-control" readonly="true" id="address_check" name="address_check"></textarea>
+										 	 </td>
+										
+										</tr>
+									</div>
+									<div class="form-group">
+										<tr>
+										  	 <th>
+										  		 <label class="" for="basisInfo_check"> 基本情况 : </label>
+											 </th>
+										 	 <td colspan="10">
+										 		 <textarea rows="3" cols="95" style="margin:5px;resize:none;" maxlength="400" type="text" class="form-control" readonly="true" id="basisInfo_check" name="basisInfo_check"></textarea>
+										 	 </td>										
+										</tr>
+									</div>
+									<div class="form-group">
+										<tr>
+										  	 <th>
+										  	 <label class="" for="feature_check"> 主要特色 : </label>
+											 </th>
+										 	 <td colspan="10">
+										 	 <textarea rows="3" cols="95" style="margin:5px;resize:none;" maxlength="400" type="text" class="form-control" readonly="true" id="feature_check" name="feature_check"></textarea>
+										 	 </td>										
+										</tr>
+									</div>
+									<div class="form-group">
+										<tr>
+										  	 <th>
+										  		 <label class="" for="emergencyDescribe_check"> 应急能力描述: </label>
+											 </th>
+										 	 <td colspan="10">
+										 		 <textarea rows="3" cols="95" style="margin:5px;resize:none;" maxlength="400" type="text" class="form-control" readonly="true" id="emergencyDescribe_check" name="emergencyDescribe_check"></textarea>
+										 	 </td>
+										
+										</tr>
+									</div>
+									<div class="form-group">
+										<tr>
+										  	 <th>
+										  		 <label class="" for="remark_check"> 备注 : </label>
+											 </th>
+										 	 <td colspan="10">
+										 		 <textarea rows="3" cols="95" style="margin:5px;resize:none;" maxlength="400" type="text" class="form-control" readonly="true" id="remark_check" name="remark_check"></textarea>
+										 	 </td>
+										
+										</tr>
+									</div>
+								</table>
+							</fieldset>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="js/EmergencyResources/mediacalInstitution.js" language="JavaScript" ></script>
+	<!-- 查看详情 -->
+	<!-- end -->
+	

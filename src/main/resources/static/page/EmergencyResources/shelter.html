@@ -1,0 +1,172 @@
+<!-- 右侧内容 -->
+			<div id="tab_bar">
+				<ul>
+					<li id="tab1" onclick="liClick('tab1')">&emsp;统计图</li>
+					<li id="tab2" onclick="liClick('tab2')">统计列表</li>
+				</ul>
+			</div>
+			<!-- 统计图 -->
+			<div class="tab_css" id="tab1_content" style="display: block">
+				<div class="rm_materialPic rm_floatLeft">
+					<div id="containCountBar" class="rm_padding_top" style="height:300px;"></div>
+					<div class="indexLevelBorder"></div>
+					<div id="containCountPie" class="rm_padding_top" style="height:300px;"></div>
+				</div>
+				<div class="rm_materialPic rm_floatRight">
+					<div id="shelterCountBar" class="rm_padding_top" style="height:300px;"></div>
+					<div class="indexLevelBorder"></div>
+					<div id="shelterCountPie" class="rm_padding_top" style="height:300px;"></div>
+				</div>
+			</div>
+			<!-- 统计列表内容 -->
+			<div class="tab_css" id="tab2_content">
+				<div class="creatRescuePlanTableDiv"></div>
+			</div>
+	<!-- 查看详情 -->
+	<div class="modal fade" id="indexModalForm" tabindex="-1" role="dialog" aria-labelledby="modalFormLabel" data-backdrop="static" aria-hidden="true" style="display: none;">
+		<div class="modal-dialog">
+			<div class="modal-content modal-content-userStyle">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				</div>
+				<div class="modal-body" >
+					<form class="form-inline" role="form" id="rescueSeeForm">
+						<div>
+							<fieldset>
+								<legend>
+									<span class="indexCheckTitle">详情</span>
+								</legend>
+								<table border="1">
+									<div class="form-group">
+										<tr>
+										 	 <th>
+										  		 <label class="" for="shelterName_check"> 场所名称: </label>
+											 </th>
+										 	 <td> 
+										 		 <textarea rows="3" cols="20" style="margin:5px;resize:none;" type="text" class="form-control" id="shelterName_check" name="shelterName_check" readonly="true"></textarea>
+											 </td>								
+										  	 <th>
+										  	 	<label class="" for="shelterType_check"> 场所类型: </label>
+											 </th>
+										 	 <td> 
+										 	 	<textarea rows="3" cols="20" style="margin:5px;resize:none;" type="text" class="form-control" id="shelterType_check" name="shelterType_check" readonly="true"></textarea>
+											 </td>
+										  	 <th >
+										  		 <label class="" for="shelterUnit_check"> 所属单位: </label>
+											 </th>
+										 	 <td> 
+										 		 <textarea rows="3" cols="20" style="margin:5px;resize:none;" type="text" class="form-control" id="shelterUnit_check" name="shelterUnit_check" readonly="true"></textarea>
+											 </td>											 
+																						
+										</tr>
+									</div>
+									<div class="form-group">
+										<tr>
+										  	 <th>
+										  	 	<label class="" for="square_check"> 面积(m²): </label>
+											 </th>
+										 	 <td> 
+										 		 <input  style="margin:5px;" maxlength="16" type="text" class="form-control" id="square_check" name="square_check" readonly="true"></input>
+											 </td>	
+											 <th>
+										  	 	<label class="" for="longitude_check"> 经度 : </label>
+											 </th>
+										 	 <td> 
+										 		 <input style="margin:5px;" maxlength="16" type="text" class="form-control" id="longitude_check" name="longitude_check" readonly="true"></input>
+											 </td>																							
+											 <th>
+										  		 <label class="" for="latitude_check"> 纬度 : </label>
+											 </th>
+										 	 <td> 
+										 		 <input style="margin:5px;" maxlength="16" type="text" class="form-control" id="latitude_check" name="latitude_check" readonly="true"></input>
+											 </td>																		
+										</tr>
+									</div>
+									<div class="form-group">
+										<tr>
+										  	 <th>
+										  		 <label class="" for="containCount_check"> 可容纳人数: </label>
+											 </th>
+										 	 <td> 
+										 		 <input style="margin:5px;" maxlength="16" type="text" class="form-control" id="containCount_check" name="containCount_check" readonly="true"></input>
+											 </td>								
+										  	 <th>
+										  		 <label class="" for="useDate_check"> 投入使用时间: </label>
+											 </th>
+										 	 <td> 
+										 		 <input style="margin:5px;" maxlength="16" type="text" class="form-control" id="useDate_check" name="useDate_check" readonly="true"></input>
+											 </td>
+										  	 <th>
+										  	 	<label class="" for="durableYears_check"> 设计使用年限: </label>
+											 </th>
+										 	 <td> 
+										 		 <input style="margin:5px;" maxlength="16" type="text" class="form-control" id="durableYears_check" name="durableYears_check" readonly="true"></input>
+											 </td>										
+										</tr>
+									</div>
+									</div>
+									<div class="form-group">
+										<tr>
+										  	 <th>
+										  		 <label class="" for="telName_check"> 联系人姓名: </label>
+											 </th>
+										 	 <td> 
+										 		 <input style="margin:5px;" maxlength="16" type="text" class="form-control" id="telName_check" name="telName_check" readonly="true"></input>
+											 </td>									
+										  	 <th>
+										  	 <label class="" for="telNumber_check"> 联系人电话: </label>
+											 </th>
+										 	 <td> <input style="margin:5px;" maxlength="16" type="text" class="form-control"
+											id="telNumber_check" name="telNumber_check" readonly="true"></input></td>
+										
+										  	 <th>
+										  	 <label class="" for="telPhone_check"> 联系人手机: </label>
+											 </th>
+										 	 <td> <input style="margin:5px;" maxlength="16" type="text" class="form-control"
+											id="telPhone_check" name="telPhone_check" readonly="true"></input></td>
+										
+										</tr>
+									</div>
+									<div class="form-group">
+										<tr>
+										  	 <th>
+										  	 	<label class="" for="fax_check"> 传真 : </label>
+											 </th>
+										 	 <td> 
+										 		 <input style="margin:5px;" maxlength="16" type="text" class="form-control"id="fax_check" name="fax_check" readonly="true"></input>
+											 </td>
+										</tr>
+									</div>
+									<div class="form-group">
+										<tr>
+										  	 <th>
+										  	 	<label class="" for="address_check"> 地址 : </label>
+											 </th>
+										 	 <td colspan="10">
+										 		 <textarea rows="3" cols="95" style="margin:5px;resize:none;" maxlength="400" type="text" class="form-control" readonly="true" id="address_check" name="address_check"></textarea>
+										 	 </td>										
+										</tr>
+									</div>
+									<div class="form-group">
+										<tr>
+										  	 <th>
+										  	 	<label class="" for="remark_check"> 备注 : </label>
+											 </th>
+										 	 <td colspan="10">
+										 		 <textarea rows="3" cols="95" style="margin:5px;resize:none;" maxlength="400" type="text" class="form-control" readonly="true" id="remark_check" name="remark_check"></textarea>
+										 	 </td>
+										
+										</tr>
+									</div>
+								</table>
+							</fieldset>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+		<script src="js/EmergencyResources/shelter.js" language="JavaScript" ></script>
+	<!-- 查看详情 -->
+	<!-- end -->
+	

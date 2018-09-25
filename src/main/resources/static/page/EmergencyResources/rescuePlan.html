@@ -1,0 +1,179 @@
+<!-- 应急预案统计 -->
+<div id="tab_bar">
+	<ul>
+		<li id="tab1" onclick="liClick('tab1')">&emsp;统计图</li>
+		<li id="tab2" onclick="liClick('tab2')">统计列表</li>
+	</ul>
+</div>
+<div class="tab_css" id="tab1_content" style="display: block">
+	<div class="indexLevel">
+		<div id="indexLevelBar" style="height:300px;"></div>
+		<div class="indexLevelBorder"></div>
+		<div id="indexLevelPie"  style="height:300px;"></div>
+	</div>
+	<div class="indexClasses">
+		<div id="indexClassesBar" style="height:300px;"></div>
+		<div class="indexClassesBorder"></div>
+		<div id="indexClassesPie"  style="height:300px;"></div>
+	</div>
+	<div class="indexField">
+		<div id="indexFieldBar" style="height:300px;"></div>
+		<div class="indexFieldBorder"></div>
+		<div id="indexFieldPie"  style="height:300px;"></div>
+	</div>
+</div>
+<div class="tab_css" id="tab2_content">
+	<div class="creatRescuePlanTableDiv"></div>
+	
+</div>
+<!-- 查看详情 -->
+<div class="modal fade" id="indexModalForm" tabindex="-1" role="dialog" aria-labelledby="modalFormLabel" data-backdrop="static" aria-hidden="true" style="display: none;">
+	<div class="modal-dialog">
+		<div class="modal-content modal-content-userStyle">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+			</div>
+			<div class="modal-body">
+				<form class="form-inline" role="form" id="rescueSeeForm">
+					<div>
+						<fieldset>
+							<legend>
+								<span class="indexCheckTitle">详情</span>
+							</legend>
+							<table border="1">
+								<div class="form-group">
+								<tr>
+								 	 <th>
+								  	 	<label class="" for="rescueName_check"> 预案名称: </label>
+									 </th>
+								 	 <td> 
+								 	 	<textarea rows="3" cols="20" style="margin:5px;resize:none;" type="text" class="form-control" id="rescueName_check" name="rescueName_check" readonly="true"></textarea>
+									 </td>	
+								  	 <th>
+								  		 <label class="" for="rescueEvent_check"> 关联事件 : </label>
+									 </th>
+								 	 <td> 
+								 	 	<textarea  rows="3" cols="20" style="margin:5px;resize:none;" type="text" class="form-control" id="rescueEvent_check" name="rescueEvent_check" readonly="true"></textarea>
+								 	 </td>									 								 							
+								  	 <th>
+								  		 <label class="" for="rescueClasses_check"> 预案类别 : </label>
+									 </th>
+								 	 <td> 
+								 	 	<textarea  rows="3" cols="20" style="margin:5px;resize:none;" type="text" class="form-control" id="rescueClasses_check" name="rescueClasses_check" readonly="true"></textarea>
+								 	 </td>																				
+								</tr>
+								</div>
+								<div class="form-group">
+								<tr>
+								  	 <th>
+								  	 	<label class="" for="rescueLevel_check"> 预案级别: </label>
+									 </th>
+								 	 <td> 
+								 	 	<textarea  rows="3" cols="20" style="margin:5px;resize:none;" type="text" class="form-control" id="rescueLevel_check" name="rescueLevel_check" readonly="true"></textarea>
+									 </td>								
+								   	 <th>
+								  	 	<label class="" for="rescuePublicUnit_check"> 发布单位 : </label>
+									 </th> 
+								 	 <td> 
+								 		 <textarea  rows="3" cols="20" style="margin:5px;resize:none;" type="text" class="form-control" id="rescuePublicUnit_check" name="rescuePublicUnit_check" readonly="true"></textarea>
+									 </td>										
+								  	 <th>
+								  	 	<label class="" for="rescueField_check"> 适用领域: </label>
+									 </th>
+								 	 <td> 
+								 		 <textarea  rows="3" cols="20" style="margin:5px;resize:none;" type="text" class="form-control" id="rescueField_check" name="rescueField_check" readonly="true"></textarea>
+									 </td>																																						
+								</tr>
+								</div>
+								<div class="form-group">
+									<tr>
+									  	 <th>
+									  	 	<label class="" for="rescueReleaseNum_check"> 发布文号 : </label>
+										 </th>
+									 	 <td> 
+									 	 	<input style="margin:5px;" maxlength="16" type="text" class="form-control" id="rescueReleaseNum_check" name="rescueReleaseNum_check" readonly="true"></input>
+									 	 </td>
+									  	 <th>
+									  	 	<label class="" for="rescueReleaseDate_check"> 发布日期 : </label>
+										 </th>
+									 	 <td> 
+									 	 	<input style="margin:5px;" maxlength="16" type="text" class="form-control" id="rescueReleaseDate_check" name="rescueReleaseDate_check" readonly="true"></input>
+									 	 </td>									
+									  	 <th>
+									  	 	<label class="" for="rescuePeople_check"> 签发人 : </label>
+										 </th>
+									 	 <td> 
+									 	 	<input style="margin:5px;" maxlength="16" type="text" class="form-control" id="rescuePeople_check" name="rescuePeople_check" readonly="true"></input>
+									 	 </td>									
+									</tr>
+								</div>
+								<div class="form-group">
+									<tr>
+									  	 <th>
+									  	 	<label class="" for="rescueOrganizer_check"> 主管单位: </label>
+										 </th>
+									 	 <td> 
+									 		 <textarea  rows="3" cols="20" style="margin:5px;resize:none;" type="text" class="form-control" id="rescueOrganizer_check" name="rescueOrganizer_check" readonly="true"></textarea>
+										 </td>								
+									  	 <th>
+									  	 	<label class="" for="rescueRevisionDate_check"> 修订日期: </label>
+										 </th>
+									 	 <td> 
+									 	 	<textarea  rows="3" cols="20" style="margin:5px;resize:none;" type="text" class="form-control" id="rescueRevisionDate_check" name="rescueRevisionDate_check" readonly="true"></textarea>
+										 </td>
+									
+									  	 <th>
+									  	 	<label class="" for="rescueDanTarget_check"> 危险目标 : </label>
+										 </th>
+									 	 <td> 
+									 		 <textarea  rows="3" cols="20" style="margin:5px;resize:none;" type="text" class="form-control" id="rescueDanTarget_check" name="rescueDanTarget_check" readonly="true"></textarea>
+										 </td>									
+									</tr>
+								</div>
+								<div class="form-group">
+									<tr>
+									  	 <th>
+									  	 	<label class="" for="rescueBasis_check"> 编制依据: </label>
+										 </th>
+									 	 <td> 
+									 		 <textarea  rows="3" cols="20" style="margin:5px;resize:none;" type="text" class="form-control" id="rescueBasis_check" name="rescueBasis_check" readonly="true"></textarea>
+										 </td>
+									  	 <th >
+									  	 	<label class="" for="rescueNum_check"> 预案备案编号 : </label>
+										 </th>									 
+									 	 <td> 
+									 	 	<textarea  rows="3" cols="20" style="margin:5px;resize:none;" type="text" class="form-control" id="rescueNum_check" name="rescueNum_check" readonly="true"></textarea>
+										 </td>																				
+									</tr>
+								</div>
+								<div class="form-group">
+									<tr>
+									  	 <th>
+									  	 	<label class="" for="rescueSummary_check"> 预案摘要: </label>
+										 </th>
+									 	 <td colspan="10">
+									 	 	<textarea rows="3" cols="95" style="margin:5px;resize:none;" maxlength="400" type="text" class="form-control" readonly="true" id="rescueSummary_check" name="rescueSummary_check"></textarea>
+									 	 </td>									
+									</tr>
+								</div>
+								<div class="form-group">
+									<tr>
+									 	 <th>
+									  	 	<label class="" for="rescueMark_check"> 备注: </label>
+										 </th>
+									 	 <td  colspan="10">
+									 		 <textarea rows="3" cols="95"  style="margin:5px;resize:none;" maxlength="400" class="form-control" readonly="true" id="rescueMark_check" name="rescueMark_check"></textarea>
+									 	 </td>									
+									</tr>
+								</div>
+							</table>
+						</fieldset>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+<script src="js/EmergencyResources/rescuePlan.js" language="JavaScript" ></script>
+<!-- 查看详情 -->
+<!-- end -->

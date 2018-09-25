@@ -1,0 +1,267 @@
+﻿@charset "utf-8";
+/* CSS Document */
+
+/* 救援预案统计图样式 */
+.indexLevel{
+	width: 34%;
+	height:99%;
+	background:#0e1c49;
+	margin-right:1%;
+	float:left;
+	border: 1px #174488 solid;
+}
+
+#indexLevelBar{
+	padding-top:20px;
+	
+}
+
+.indexLevelBorder{
+	height:1px;
+	margin-left: 76px;
+    margin-right: 74px;
+	border-bottom:1px #133458 dashed;
+}
+	
+#indexLevelPie{
+	padding-top:20px;
+}
+
+.indexClasses{
+	width:32%;
+	height:99%;
+	background:#0e1c49;
+	margin-right:1%;
+	float:left;
+    border: 1px #174488 solid;
+}
+
+#indexClassesBar{
+	padding-top:20px;
+	
+}
+
+.indexClassesBorder{
+	height:1px;
+	margin-left: 76px;
+    margin-right: 74px;
+	border-bottom:1px #133458 dashed;
+}
+	
+#indexClassesPie{
+	padding-top:20px;
+}
+
+.indexField{
+	width:32%;
+	height:99%;
+	background:#0e1c49;
+	float:left;
+	border: 1px #174488 solid;
+}
+
+#indexFieldBar{
+	padding-top:20px;
+	
+}
+
+.indexFieldBorder{
+	height:1px;
+	margin-left: 76px;
+    margin-right: 74px;
+	border-bottom:1px #133458 dashed;
+}
+	
+#indexFieldPie{
+	padding-top:20px;
+}
+/* end */
+
+/* 救援预案表格样式 */
+#tab2_content{
+	width:100%;
+	height:92%;
+	/* border:1px red solid; */
+	margin:10px auto;
+	min-width: 980px;
+	
+}
+.creatRescuePlanTableDiv{
+	/* width:100%;
+	height:100%; */
+	padding-top:3%;
+	/* border:1px red solid; */
+}
+
+.indexNavigation{
+	float : right;
+	line-height: 110px;
+  	margin-right: 20px;
+  	height: 70px;
+}
+
+.indexNavigation span img:hover{
+	cursor: pointer;
+}
+
+.indexNavigation span{
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.indexNavigationInterval{
+	padding-right: 10px;
+}
+
+.indexUserNameImg{
+	margin-right: 5px;
+}
+
+.indexMenuSelect{
+	clear: both;
+  	float: right;
+  	height: 70px;
+  	margin-right: 2px;
+  	display: none;
+}
+
+.indexMenuSelect ul{
+	margin-top: 0px;
+	text-align: center;
+}
+
+a:hover{
+	color: #428bca;
+}
+
+.indexMenuSelectXg{
+	color: #a1a2a4;
+}
+
+.indexMenuSelectXg:hover{
+	color: #428bca;
+	cursor: pointer;
+}
+
+.indexMenuEdit{
+	/* display: none; */
+}
+
+#tab1, #tab2{
+	cursor: pointer;
+}
+
+/*修改用户信息弹框*/
+.cd-edit{
+	position: relative;
+	z-index: 1500;
+	clear: both;
+  	float: right;
+  	margin-top: 111px;
+  	margin-right: 13px;
+  	display: none;
+}
+.cd-edit-wtc,.cd-edit-tc{
+	width:345px;
+	height:360px;
+	background-color: #105086;	
+}
+.cd-edit-title{
+	border-bottom:#bbbfc7 2px solid;
+	line-height:50px;
+	font-size:20px;
+	color: #bbbfc7;
+	text-align: center;
+}
+.cd-close-form {
+  display: block;
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  left: 324px;
+  top: 5px;
+}
+
+.cd-close-form img:hover{
+	cursor: pointer;
+}
+
+.cd-form input.has-padding1 {
+  padding: 0 8px;
+  height: 26px;
+  line-height:26px;
+  width: 178px;
+  background: url("images/login/login_input0.png") no-repeat;
+  border: none;
+  border-radius:7px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  margin-left: 10px;
+}
+.cd-form input.full-width {
+  width: 270px;
+  height:30px;
+  line-height:1px;
+}
+.cd-form input[type=button] {
+	margin-top:10px;
+  padding: 16px 0;
+  cursor: pointer;
+  color: #bbbfc7;
+  font-weight: bold;
+  background-color: #428bca;
+  border: none;
+  
+  margin:0 10px;
+  border-radius:7px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+}
+.no-touch .cd-form input[type=button]:hover, .no-touch .cd-form input[type=button]:focus {
+  background: #F48825;
+  outline: none;
+}
+
+.fieldset{
+	width:285px;
+	text-align: center;
+}
+
+.fieldset label{
+	color: #bbbfc7;
+}
+
+.fieldset input{
+	color: #bbbfc7
+}
+
+.cd-form .fieldset {
+    margin: 2em 0;
+    margin:0 30px;
+}
+
+.cd-form .fieldset:first-child {
+    margin-top: 25px;
+}
+
+.cd-form .fieldset:last-child {
+    margin-bottom: 0;
+}
+
+.cd-error{
+	fontSize: 12px;
+	color: red;
+	text-align: left;
+	height: 20px;
+	margin-left: 103px;
+}
+
+.po{
+	cursor: pointer;
+}

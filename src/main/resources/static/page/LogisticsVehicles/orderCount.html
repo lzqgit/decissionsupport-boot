@@ -1,0 +1,135 @@
+
+		<!-- 右侧内容 -->
+			<div id="tab_bar">
+				<ul>
+					<li id="tab1" onclick="liClick('tab1')">&emsp;统计图</li>
+					<li id="tab2" onclick="liClick('tab2')">统计列表</li>
+				</ul>
+			</div>
+			<!-- 统计图 -->
+			<div class="tab_css" id="tab1_content" style="display: block">
+				<div class="rm_materialPic rm_floatLeft">
+					<div id="totalOrderCountBar" class="rm_padding_top" style="height:300px;"></div>
+					<div class="indexLevelBorder"></div>
+					<div id="totalOrderCountPie" class="rm_padding_top" style="height:300px;"></div>
+				</div>
+				<div class="rm_materialPic rm_floatRight">
+					<div id="enterpriseOrderCountBar" class="rm_padding_top" style="height:300px;"></div>
+					<div class="indexLevelBorder"></div>
+					<div id="enterpriseOrderCountPie" class="rm_padding_top" style="height:300px;"></div>
+				</div>
+			</div>
+			<!-- 统计列表内容 -->
+			<div class="tab_css" id="tab2_content">
+				<div class="creatRescuePlanTableDiv"></div>
+			</div>
+
+	<!-- 查看详情 -->
+	<div class="modal fade" id="indexModalForm" tabindex="-1" role="dialog" aria-labelledby="modalFormLabel" data-backdrop="static" aria-hidden="true" style="display: none;">
+		<div class="modal-dialog">
+			<div class="modal-content modal-content-userStyle">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				</div>
+				<div class="modal-body">
+					<form class="form-inline" role="form" id="rescueSeeForm">
+						<div>
+							<fieldset>
+								<legend>
+									<span class="indexCheckTitle">详情</span>
+								</legend>
+								<table border="1">
+							<!-- 		<div class="form-group">
+										<tr>
+										 	 <th>
+										  		 <label class="" for="orderID_check"> ID: </label>
+											 </th>
+										 	 <td> 
+										 		 <input style="margin:5px;" maxlength="16" type="text" class="form-control" id="orderID_check" name="orderID_check" readonly="true"></input>
+											 </td>										
+										  	 <th>
+										  		 <label class="" for="enterpriseID_check"> 企业ID : </label>
+											 </th>
+										 	 <td> 
+										 	 	<input style="margin:5px;" maxlength="40" type="text" class="form-control" id="enterpriseID_check" name="enterpriseID_check" readonly="true"></input>
+											 </td>	
+										  	 <th>
+										  	 	<label class="" for="logisticsEnterprise_check"> 物流企业: </label>
+											 </th>
+										 	 <td> 
+										 		 <input style="margin:5px;" maxlength="16" type="text" class="form-control" id="logisticsEnterprise_check" name="logisticsEnterprise_check" readonly="true"></input>
+											 </td>											 																				
+										</tr>
+									</div> -->
+									<div class="form-group">
+										<tr>									
+										  	 <th >
+										  		 <label class="" for="orderNumber_check"> 订单号: </label>
+											 </th>
+										 	 <td> 
+										 		 <input style="margin:5px;" maxlength="40" type="text" class="form-control" id="orderNumber_check" name="orderNumber_check" readonly="true"></input>
+											 </td>	
+										  	 <th>
+										  	 	<label class="" for="cargoNumber_check"> 货单号: </label>
+											 </th>
+										 	 <td> 
+										 	 	<input  style="margin:5px;" maxlength="16" type="text" class="form-control" id="cargoNumber_check" name="cargoNumber_check" readonly="true"></input>
+											 </td>
+										  	 <th>
+										  	 	<label class="" for="orderStatus_check"> 订单状态: </label>
+											 </th>
+										 	 <td> 
+										 		 <input style="margin:5px;" maxlength="16" type="text" class="form-control" id="orderStatus_check" name="orderStatus_check" readonly="true"></input>
+											 </td>									
+										</tr>
+									</div>
+									<div class="form-group">
+										<tr>
+										  	 <th>
+										  	 	<label class="" for="orderDate_check"> 订单生产日期: </label>
+											 </th>
+										 	 <td> 
+										 	 	<input style="margin:5px;" maxlength="16" type="text" class="form-control" id="orderDate_check" name="orderDate_check" readonly="true"></input>
+											 </td>
+											 <th>
+										  		 <label class="" for="creator_check"> 创建人: </label>
+											 </th>
+										 	 <td> 
+										 		 <textarea style="margin:5px;resize:none;" maxlength="16" type="text" class="form-control" id="creator_check" name="creator_check" readonly="true"></textarea>
+											 </td>										
+										  	 <th>
+										  		 <label class="" for="createDate_check"> 创建时间: </label>
+											 </th>
+										 	 <td> 
+										 		 <input style="margin:5px;" maxlength="16" type="text" class="form-control" id="createDate_check" name="createDate_check" readonly="true"></input>
+											 </td>
+										</tr>
+									</div>
+									<div class="form-group">
+										<tr>
+										  	 <th>
+										  	 	<label class="" for="reviser_check"> 修改人: </label>
+											 </th>
+										 	 <td> 
+										 		 <textarea style="margin:5px;resize:none;" maxlength="16" type="text" class="form-control" id="reviser_check" name="reviser_check" readonly="true"></textarea>
+											 </td>									
+										  	 <th>
+										  	 	<label class="" for="reviseDate_check"> 修改时间: </label>
+											 </th>
+										 	 <td> 
+										 		 <input style="margin:5px;" maxlength="16" type="text" class="form-control" id="reviseDate_check" name="reviseDate_check" readonly="true"></input>
+											 </td>										
+										</tr>
+									</div>
+								</table>
+							</fieldset>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+		<script src="js/LogisticsVehicles/orderCount.js" language="JavaScript" ></script>
+	<!-- 查看详情 -->
+	<!-- end -->
+	

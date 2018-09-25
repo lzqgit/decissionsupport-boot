@@ -1,0 +1,19 @@
+.rm_materialPic{
+  width: 49%;
+  height: 99%;
+  background: #0e1c49;
+  margin-right: 1%;
+  border: 1px #174488 solid;
+}
+
+.rm_floatLeft{
+  float: left;
+}
+
+.rm_floatRight{
+  float: right;
+}
+
+.rm_padding_top{
+	padding-top: 20px;
+}

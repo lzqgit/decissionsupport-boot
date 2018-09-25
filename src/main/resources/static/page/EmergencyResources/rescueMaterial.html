@@ -1,0 +1,212 @@
+<div id="tab_bar">
+				<ul>
+					<li id="tab1" onclick="liClick('tab1')">&emsp;统计图</li>
+					<li id="tab2" onclick="liClick('tab2')">统计列表</li>
+				</ul>
+			</div>
+			<!-- 统计图 -->
+			<div class="tab_css" id="tab1_content" style="display: block">
+				<div class="rm_materialPic rm_floatLeft">
+					<div id="materialNumBar" class="rm_padding_top" style="height:620px;"></div>
+				</div>
+				<div class="rm_materialPic rm_floatRight">
+					<div id="materialNumPie" class="rm_padding_top" style="height:620px;"></div>
+				</div>
+			</div>
+			<!-- 统计列表内容 -->
+			<div class="tab_css" id="tab2_content">
+				<div class="creatRescuePlanTableDiv"></div>
+			</div>
+
+	<!-- 查看详情 -->
+	<div class="modal fade" id="indexModalForm" tabindex="-1" role="dialog" aria-labelledby="modalFormLabel" data-backdrop="static" aria-hidden="true" style="display: none;">
+		<div class="modal-dialog">
+			<div class="modal-content modal-content-userStyle">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				</div>
+				<div class="modal-body">
+					<form class="form-inline" role="form" id="rescueSeeForm">
+						<div>
+							<fieldset>
+								<legend>
+									<span class="indexCheckTitle">详情</span>
+								</legend>
+								<table border="1">
+									<div class="form-group">
+										<tr>
+										 	 <th>
+										  	 	<label class="" for="equipName_check"> 物资装备名称: </label>
+											 </th>
+										 	 <td> 
+										 	 	<textarea rows="3" cols="20" style="margin:5px;resize:none;" type="text" class="form-control" id="equipName_check" name="equipName_check" readonly="true"></textarea>
+											</td>
+																															
+										  	 <th>
+										  	 	<label class="" for="equipType_check"> 装备类型: </label>
+											 </th>
+										 	 <td> 
+										 	 	<textarea rows="3" cols="20"  style="margin:5px;resize:none;" type="text" class="form-control" id="equipType_check" name="equipType_check" readonly="true"></textarea>
+											 </td>	
+										  	 <th>
+										  	 	<label class="" for="equipLevel_check"> 装备类别: </label>
+											 </th>
+										 	 <td> 
+										 	 	<textarea rows="3" cols="20" style="margin:5px;resize:none;"  type="text" class="form-control" id="equipLevel_check" name="equipLevel_check" readonly="true"></textarea>
+											 </td>											 																															
+										</tr>
+									</div>
+									<div class="form-group">
+										<tr>
+										  	 <th>
+										  	 	<label class="" for="equipSource_check"> 装备来源 : </label>
+											 </th>
+										 	 <td> 
+										 	 	<textarea rows="3" cols="20" style="margin:5px;resize:none;" type="text" class="form-control" id="equipSource_check" name="equipSource_check" readonly="true"></textarea>
+										 	 </td>										
+										  	 <th >
+										  	 	<label class="" for="belongTroop_check"> 所属队伍 : </label>
+											 </th>
+										 	 <td> 
+										 	 	<textarea rows="3" cols="20" style="margin:5px;resize:none;" type="text" class="form-control" id="belongTroop_check" name="belongTroop_check" readonly="true"></textarea>
+										 	 </td>										
+										  	 <th>
+										  	 	<label class="" for="equipPublicUnit_check"> 所属单位 : </label>
+											 </th>
+										 	 <td> 
+										 	 	<textarea rows="3" cols="20" style="margin:5px;resize:none;" type="text" class="form-control" id="equipPublicUnit_check" name="equipPublicUnit_check" readonly="true"></textarea>
+										 	 </td>
+									
+										</tr>
+									</div>
+									<div class="form-group">
+										<tr>
+										  	 <th>
+										  	 	<label class="" for="equipUse_check"> 用途 : </label>
+											 </th>
+										 	 <td> 
+										 		 <textarea rows="3" cols="20" style="margin:5px;resize:none;" type="text" class="form-control" id="equipUse_check" name="equipUse_check" readonly="true"></textarea>
+											 </td>										
+										  	 <th>
+										  	 	<label class="" for="areaName_check"> 行政区划名称: </label>
+											 </th>
+										 	 <td> 
+										 	 	<textarea rows="3" cols="20" style="margin:5px;resize:none;" type="text" class="form-control" id="areaName_check" name="areaName_check" readonly="true"></textarea>
+											 </td>										
+										  	 <th>
+										  	 	<label class="" for="standardModel_check"> 规格型号 : </label>
+											 </th>
+										 	 <td> 
+										 	 	<textarea rows="3" cols="20" style="margin:5px;resize:none;"  type="text" class="form-control" id="standardModel_check" name="standardModel_check" readonly="true"></textarea>
+											 </td>										
+										</tr>
+									</div>
+									<div class="form-group">
+										<tr>
+										  	 <th>
+										  	 	<label class="" for="equipPrice_check"> 单价（元）: </label>
+											 </th>
+										 	 <td> 
+										 		 <input style="margin:5px;" maxlength="16" type="text" class="form-control" id="equipPrice_check" name="equipPrice_check" readonly="true"></input>
+											 </td>										
+										  	 <th>
+										  		 <label class="" for="equipNumber_check"> 数量 : </label>
+											 </th>
+										 	 <td> 
+										 	 	<input style="margin:5px;" maxlength="16" type="text" class="form-control" id="equipNumber_check" name="equipNumber_check" readonly="true"></input>
+										 	 </td>
+										  	 <th>
+										  	 	<label class="" for="measureUnit_check"> 计量单位 : </label>
+											 </th>
+										 	 <td> 
+										 		 <input style="margin:5px;" maxlength="16" type="text" class="form-control" id="measureUnit_check" name="measureUnit_check" readonly="true"></input>
+										 	 </td>										
+										</tr>
+									</div>
+									<div class="form-group">
+										<tr>
+										  	 <th>
+										  	 	<label class="" for="propertyNumber_check"> 资产编号 : </label>
+											 </th>
+										 	 <td> 
+										 		 <textarea rows="3" cols="20" style="margin:5px;resize:none;"  type="text" class="form-control" id="propertyNumber_check" name="propertyNumber_check" readonly="true"></textarea>
+											 </td>										
+										  	 <th>
+										  	 	<label class="" for="buyDate_check"> 购买日期 : </label>
+											 </th>
+										 	 <td> 
+										 	 	<textarea rows="3" cols="20" style="margin:5px;resize:none;" type="text" class="form-control" id="buyDate_check" name="buyDate_check" readonly="true"></textarea>
+											 </td>										
+										  	 <th>
+										  	 	<label class="" for="storePlace_check"> 存放场所 : </label>
+											 </th>
+										 	 <td> 
+										 	 	<textarea rows="3" cols="20" style="margin:5px;resize:none;" type="text" class="form-control" id="storePlace_check" name="storePlace_check" readonly="true"></textarea>
+											 </td>										
+										</tr>
+									</div>
+									<div class="form-group">
+										<tr>
+										  	 <th>
+										  	 	<label class="" for="productFactory_check"> 生产厂家 : </label>
+											 </th>
+										 	 <td> 
+										 	 	<textarea rows="3" cols="20" style="margin:5px;resize:none;" type="text" class="form-control" id="productFactory_check" name="productFactory_check" readonly="true"></textarea>
+											 </td>										
+										  	 <th>
+										  	 	<label class="" for="factoryDate_check"> 出厂日期 : </label>
+											 </th>
+										 	 <td> 
+										 	 	<textarea rows="3" cols="20" style="margin:5px;resize:none;" type="text" class="form-control" id="factoryDate_check" name="factoryDate_check" readonly="true"></textarea>
+											 </td>
+										  	 <th>
+										  	 	<label class="" for="durableYears_check"> 使用年限 : </label>
+											 </th>
+										 	 <td> 
+										 	 	<textarea rows="3" cols="20" style="margin:5px;resize:none;"  type="text" class="form-control" id="durableYears_check" name="durableYears_check" readonly="true"></textarea>
+											 </td>										
+										</tr>
+									</div>
+									<div class="form-group">
+										<tr>
+										  	 <th>
+										  		 <label class="" for="telName_check"> 联系人 : </label>
+											 </th>
+										 	 <td> 
+										 	 	<input style="margin:5px;" maxlength="16" type="text" class="form-control" id="telName_check" name="telName_check" readonly="true"></input>
+											 </td>
+										  	 <th>
+										  	 	<label class="" for="telPhone_check"> 联系方式 : </label>
+											 </th>
+										 	 <td> 
+										 	 	<input style="margin:5px;" maxlength="16" type="text" class="form-control" id="telPhone_check" name="telPhone_check" readonly="true"></input>
+											 </td>										
+										</tr>
+									</div>
+									<div class="form-group">
+										<tr>
+										  	 <th>
+										  	 <label class="" for="longitude_check"> 经度 : </label>
+											 </th>
+										 	 <td> 
+										 	 <input style="margin:5px;" maxlength="16" type="text" class="form-control" id="longitude_check" name="longitude_check" readonly="true"></input>
+											</td>									
+										  	 <th>
+										  	 	<label class="" for="latitude_check"> 纬度 : </label>
+											 </th>
+										 	 <td> 
+										 	 	<input style="margin:5px;" maxlength="16" type="text" class="form-control" id="latitude_check" name="latitude_check" readonly="true"></input>
+											</td>
+										</tr>
+									</div>
+								</table>
+							</fieldset>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+<script src="js/EmergencyResources/rescueMaterial.js" language="JavaScript" ></script>
+	<!-- 查看详情 -->
+	<!-- end -->

@@ -1,0 +1,112 @@
+<!-- 右侧内容 -->
+			<div id="tab_bar">
+				<ul>
+					<li id="tab1" onclick="liClick('tab1')">&emsp;统计图</li>
+					<li id="tab2" onclick="liClick('tab2')">统计列表</li>
+				</ul>
+			</div>
+			<!-- 统计图 -->
+			<div class="tab_css" id="tab1_content" style="display: block">
+				<div id="barDiv" class="rm_materialPic rm_floatLeft">
+					<div id="complaintTypeBar" class="rm_padding_top" style="height:620px;"></div>
+				</div>
+				<div id="pieDiv" class="rm_materialPic rm_floatRight">
+					<div id="complaintTypePie" class="rm_padding_top" style="height:620px;"></div>
+				</div>
+			</div>
+			<!-- 统计列表内容 -->
+			<div class="tab_css" id="tab2_content">
+				<div class="creatRescuePlanTableDiv"></div>
+			</div>
+
+	<!-- 查看详情 -->
+	<div class="modal fade" id="indexModalForm" tabindex="-1" role="dialog" aria-hidden="true" style="display: none;">
+		<div class="modal-dialog">
+			<div class="modal-content modal-content-userStyle">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+				</div>
+				<div class="modal-body">
+					<form class="form-inline" role="form" id="rescueSeeForm">
+						<div>
+							<fieldset>
+								<legend>
+									<span class="indexCheckTitle">详情</span>
+								</legend>
+								<table border="1">
+									<div class="form-group">
+										<tr>
+											 <th>
+										  		 <label class="" for="title_check"> 主题: </label>
+											 </th>
+										 	 <td> 
+										 	 	<textarea rows="3" cols="20" style="margin:5px;resize:none;" type="text" class="form-control" id="title_check" name="title_check" readonly="true"></textarea>
+											 </td>
+										  	 <th>
+										  	 	<label class="" for="complaintDep_check"> 投诉部门: </label>
+											 </th>
+										 	 <td> 
+										 	 	<textarea rows="3" cols="20" style="margin:5px;resize:none;" type="text" class="form-control" id="complaintDep_check" name="complaintDep_check" readonly="true"></textarea>
+											 </td>											 											
+										 	 <th>
+										  	 	<label class="" for="complainter_check"> 投诉人: </label>
+											 </th>
+										 	 <td> 
+										 	 	<textarea rows="3" cols="20" style="margin:5px;resize:none;" type="text" class="form-control" id="complainter_check" name="complainter_check" readonly="true"></textarea>
+											 </td>																																
+										</tr>
+									</div>
+									<div class="form-group">
+										<tr>										
+										  	 <th >
+										    	 <label class="" for="telPhone_check"> 手机号码: </label>
+											 </th>
+										 	 <td> 
+										 	 	<input style="margin:5px;" maxlength="40" type="text" class="form-control" id="telPhone_check" name="telPhone_check" readonly="true"></input>
+											 </td>
+										  	 <th>
+										  		 <label class="" for="telNumber_check"> 固定电话: </label>
+											 </th>
+										 	 <td> 
+										 	 	<input  style="margin:5px;" maxlength="16" type="text" class="form-control" id="telNumber_check" name="telNumber_check" readonly="true"></input>
+											 </td>
+										  	 <th>
+										  	 	<label class="" for="email_check"> 电子邮箱: </label>
+											 </th>
+										 	 <td> 
+										 	 	<input style="margin:5px;" maxlength="40" type="text" class="form-control" id="email_check" name="email_check" readonly="true"></input>
+											 </td>									
+										</tr>
+									</div>
+									<div class="form-group">
+										<tr>
+										  	 <th>
+										  	 	<label class="" for="content_check"> 投诉内容: </label>
+											 </th>
+									 		 <td colspan="10">
+										 		 <textarea rows="3" cols="95" style="margin:5px;resize:none;" maxlength="400" type="text" class="form-control" readonly="true" id="content_check" name="content_check"></textarea>
+										 	 </td>										
+										</tr>
+									</div>
+									<div class="form-group">
+										<tr>
+										  	 <th>
+										  		 <label class="" for="homeAddress_check"> 家庭地址: </label>
+											 </th>
+										 	 <td colspan="10">
+										 	 	<textarea rows="3" cols="95" style="margin:5px;resize:none;" maxlength="400" type="text" class="form-control" readonly="true" id="homeAddress_check" name="homeAddress_check"></textarea>
+										 	 </td>										
+										</tr>
+									</div>
+								</table>
+							</fieldset>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="js/ComplaintInformation/complainInfo.js" language="JavaScript" ></script>
+	<!-- 查看详情 -->
+	<!-- end -->
+	
